@@ -1,0 +1,33 @@
+.tab {
+  height: 40px;
+  border: 1px solid #dddbd7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #efeeec;
+  cursor: pointer;
+}
+
+.tab--active {
+  border-bottom-color: #efeeec;
+}
+.tab-count {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  font-size: 9px;
+}
+.tab-value {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.tab-value--disabled {
+  color: #cfcbc6;
+}
+.tab-count--disabled {
+  color: #cfcbc6;
+}
