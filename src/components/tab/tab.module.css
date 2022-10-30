@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-.tab--active {
+.tab-active {
   border-bottom-color: #efeeec;
 }
 .tab-count {
@@ -25,9 +25,9 @@
   font-weight: 500;
 }
 
-.tab-value--disabled {
+.tab-value-disabled {
   color: #cfcbc6;
 }
-.tab-count--disabled {
+.tab-count-disabled {
   color: #cfcbc6;
 }

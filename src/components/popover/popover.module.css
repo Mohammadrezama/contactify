@@ -1,0 +1,29 @@
+.popover {
+  position: fixed;
+  /* top: 0;
+  right: 50%;
+  left: 0; */
+  z-index: 200;
+}
+
+.backdrop {
+  inset: 0;
+  background: #000;
+  position: fixed;
+  z-index: 100;
+}
+
+.with-transition {
+  transition: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visible {
+  pointer-events: all;
+  visibility: visible;
+}
+.invisible {
+  pointer-events: none;
+  visibility: visible;
+}

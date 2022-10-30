@@ -1,0 +1,15 @@
+.user-name-wrapper {
+  background-color: #c73c2a;
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.label {
+  text-transform: uppercase;
+}

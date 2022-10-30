@@ -1,0 +1,13 @@
+.contact {
+  border-bottom: 1px dotted #dddbd7;
+  padding: 10px;
+}
+
+.firstName {
+  font-size: 14px;
+  cursor: pointer;
+}
+.lastName {
+  text-transform: uppercase;
+  cursor: pointer;
+}

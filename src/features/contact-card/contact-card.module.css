@@ -1,0 +1,48 @@
+.contact-card {
+  background-color: #efeeec;
+  height: 200px;
+  box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: [img-grid] 1fr [img-grid-end info-grid] 11fr [info-grid-end];
+  padding: 10px;
+  column-gap: 20px;
+}
+
+.img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  margin-top: 10px;
+}
+
+.img-grid {
+  grid-column: img-grid / img-grid-end;
+}
+
+.info-grid {
+  grid-column: info-grid / info-grid-end;
+}
+
+.name-box {
+  color: #c4c1bc;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  display: grid;
+  grid-template-columns: [label-start] max-content [label-end value-start] 1fr [value-end];
+  column-gap: 10px;
+  row-gap: 5px;
+  font-size: 14px;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.value {
+  grid-column: value-start/value-end;
+}

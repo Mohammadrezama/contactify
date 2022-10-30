@@ -1,10 +1,10 @@
-import './contact.css';
+import styles from './contact.module.css';
 export const Contact = (props) => {
-  const { firstName, lastName } = props;
+  const { firstName, lastName, onClick } = props;
   return (
-    <div className="contact">
-      <span className="conatact__firstName">{firstName}, </span>
-      <span className="lastName__lastName">{lastName}</span>
+    <div className={styles.contact} onClick={onClick}>
+      <span className={styles.firstName}>{firstName}, </span>
+      <span className={styles.lastName}>{lastName}</span>
     </div>
   );
 };
