@@ -34,7 +34,7 @@ export const ContactCard = ({ user, onClose }) => {
       </div>
       <div className={styles['info-grid']}>
         <div className={styles['name-box']}>
-          <span className="textw-uppercase ">{user.name.last}, </span>
+          <span className="text-uppercase ">{user.name.last}, </span>
           <span className="text-lowercase"> {user.name.first}</span>
         </div>
         <div className={styles['info-box']}>

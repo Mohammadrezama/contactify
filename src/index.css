@@ -1,12 +1,22 @@
 @import-normalize;
-body {
+
+* {
   margin: 0;
-  font-family: 'Open Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 50%;
+}
+
+body {
+  margin-top: 20px;
+  font-family: 'Open Sans', 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1.4rem;
 }
 
 code {
@@ -15,11 +25,7 @@ code {
 }
 
 .container {
-  width: 90%;
-}
-
-.mx-auto {
-  margin: 0 auto;
+  width: 100%;
 }
 
 .text-center {
@@ -55,4 +61,84 @@ code {
 
 .opacity-20 {
   opacity: 0.2;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.px-2 {
+  padding: 0 0.5rem;
+}
+
+.px-4 {
+  padding: 0 1rem;
+}
+
+.py-2 {
+  padding: 0.5rem 0;
+}
+
+.py-4 {
+  padding: 1 rem 0;
+}
+.m-2 {
+  margin: 0.5rem;
+}
+.m-4 {
+  margin: 1rem;
+}
+
+.mx-2 {
+  margin: 0 0.5rem;
+}
+.mx-4 {
+  margin: 0 1rem;
+}
+.my-2 {
+  margin: 0.5rem 0;
+}
+.my-4 {
+  margin: 1rem 0;
+}
+.mx-auto {
+  margin: 0 auto;
+}
+
+.my-auto {
+  margin: auto 0;
+}
+
+/* sm  */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* xl  */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
 }

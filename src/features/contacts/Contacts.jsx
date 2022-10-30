@@ -1,19 +1,35 @@
 import { useState } from 'react';
 import { Contact, Popover, ClickAwayListener } from 'components';
 import { ContactCard } from 'features';
+import { useMediaquery } from 'hooks';
 import styles from './contacts.module.css';
 export const Contacts = ({ items }) => {
+  const { width } = useMediaquery();
   const [showPopup, setShow] = useState(false);
-  const [position, setPositon] = useState({ top: 0, right: 0, left: 0 });
+  const [position, setPositon] = useState({
+    top: 0,
+    right: 0,
+    left: 0,
+    width: 'auto',
+  });
   const [user, setUser] = useState(null);
   function onClick(e, item) {
     let position = e.currentTarget.getBoundingClientRect();
-    setPositon({
-      top: position.top + position.height,
-      right: position.right,
-      left: position.left,
-      width: position.width,
-    });
+    if (width < 1024) {
+      setPositon({
+        top: '30%',
+        right: '10%',
+        left: '10%',
+        width: '80%',
+      });
+    } else {
+      setPositon({
+        top: position.top + position.height,
+        right: position.right,
+        left: position.left,
+        width: position.width,
+      });
+    }
     setUser(item);
     setShow(true);
   }

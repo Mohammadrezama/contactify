@@ -17,7 +17,6 @@ export const Popover = (props) => {
             onClose();
           }
         }}
-        show={show}
       >
         {children}
       </div>

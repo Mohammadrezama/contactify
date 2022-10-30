@@ -72,7 +72,7 @@ const Home = () => {
 
   return (
     <div className="main">
-      <h2 className="text-center">Contact List </h2>
+      <h2 className="text-center my-4">Contact List </h2>
       <div className="show-box">
         <Tabs
           tabsData={tabsData}

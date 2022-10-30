@@ -1,13 +1,21 @@
 .contact {
   border-bottom: 1px dotted #dddbd7;
   padding: 10px;
+  text-align: center;
 }
 
 .firstName {
-  font-size: 14px;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 .lastName {
   text-transform: uppercase;
   cursor: pointer;
+}
+
+/* sm  */
+@media (min-width: 640px) {
+  .contact {
+    text-align: initial;
+  }
 }
