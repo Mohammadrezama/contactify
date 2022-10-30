@@ -1,41 +1,42 @@
 import './home.css';
 import { useState, useEffect } from 'react';
 import { Tabs, Contacts } from 'features';
-const apiAddress = 'https://randomuser.me/api/1.4/';
+import { toast } from 'react-toastify';
 const lettersArray = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
+  { value: 'a', count: 0 },
+  { value: 'b', count: 0 },
+  { value: 'c', count: 0 },
+  { value: 'd', count: 0 },
+  { value: 'e', count: 0 },
+  { value: 'f', count: 0 },
+  { value: 'g', count: 0 },
+  { value: 'h', count: 0 },
+  { value: 'i', count: 0 },
+  { value: 'j', count: 0 },
+  { value: 'k', count: 0 },
+  { value: 'l', count: 0 },
+  { value: 'm', count: 0 },
+  { value: 'n', count: 0 },
+  { value: 'o', count: 0 },
+  { value: 'p', count: 0 },
+  { value: 'q', count: 0 },
+  { value: 'r', count: 0 },
+  { value: 's', count: 0 },
+  { value: 't', count: 0 },
+  { value: 'u', count: 0 },
+  { value: 'v', count: 0 },
+  { value: 'w', count: 0 },
+  { value: 'x', count: 0 },
+  { value: 'y', count: 0 },
+  { value: 'z', count: 0 },
 ];
+const apiAddress = 'https://randomuser.me/api/1.4/';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('');
   const [data, setData] = useState([]);
   const [categorizedData, setCategorizedData] = useState([]);
-  const [tabsData, setTabsData] = useState([]);
+  const [tabsData, setTabsData] = useState(lettersArray);
   function userCategorization(users) {
     let userList = {};
     users.forEach((item) => {
@@ -50,8 +51,8 @@ const Home = () => {
   function tabCategorization(users) {
     let tabsArray = [];
     tabsArray = lettersArray.map((letter) => ({
-      value: letter,
-      count: users[letter]?.length ? users[letter]?.length : 0,
+      value: letter.value,
+      count: users[letter.value]?.length ? users[letter.value]?.length : 0,
     }));
     tabsArray.sort((a, b) => a.value.localeCompare(b.value));
     return tabsArray;
@@ -67,12 +68,16 @@ const Home = () => {
         let userTabs = tabCategorization(userCategorized);
         setCategorizedData(userCategorized);
         setTabsData(userTabs);
+        setActiveTab('a');
+      })
+      .catch((e) => {
+        toast.error('Something went wrong');
       });
   }, []);
 
   return (
     <div className="main">
-      <h2 className="text-center my-4">Contact List </h2>
+      <h3 className="text-center my-4 main-title">Contact List </h3>
       <div className="show-box">
         <Tabs
           tabsData={tabsData}

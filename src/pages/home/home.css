@@ -8,6 +8,11 @@
   flex-direction: column;
 }
 
+.main-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 .contact-wrapper {
   height: 300px;
   background-color: #efeeec;
